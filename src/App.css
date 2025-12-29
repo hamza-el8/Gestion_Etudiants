@@ -1,0 +1,921 @@
+
+
+body{
+  margin: 0;
+  padding: 0;
+}
+
+      /************************** Logine **************************/
+/* Background professionnel */
+.auth-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f6f8;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Carte */
+.auth-card {
+  width: 360px;
+  background: #ffffff;
+  padding: 32px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Titre */
+.auth-card h2 {
+  margin-bottom: 24px;
+  text-align: center;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+/* Groupes */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  color: #4a5568;
+}
+
+/* Champs */
+.form-group input {
+  padding: 10px 12px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #cbd5e0;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #3182ce;
+  box-shadow: 0 0 0 2px rgba(49, 130, 206, 0.15);
+}
+
+/* Bouton */
+.auth-card button {
+  width: 100%;
+  padding: 11px;
+  margin-top: 10px;
+  background-color: #3182ce;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.auth-card button:hover {
+  background-color: #2b6cb0;
+}
+
+/* Erreur */
+.auth-error {
+  background: #fed7d7;
+  color: #9b2c2c;
+  padding: 10px;
+  border-radius: 6px;
+  font-size: 13px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+
+
+
+          /************************** Header **************************/
+
+/* ===== HEADER ===== */
+.app-header {
+  height: 70px;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e2e8f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Logo */
+.logo h3 {
+  margin: 0;
+  color: #2d3748;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Menu */
+.nav-menu ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Texte du menu */
+.nav-menu li {
+  font-size: 14px;
+}
+
+/* 🔴 SUPPRESSION DU STYLE LIEN */
+.nav-menu a {
+  color: #000000;          /* noir */
+  text-decoration: none;   /* pas de soulignement */
+  font-weight: 500;
+  margin-right: 250px;
+}
+
+/* Hover sans ligne */
+.nav-menu a:hover {
+  color: #000000;
+}
+
+/* 🔴 SUPPRESSION DE LA LIGNE BLEUE */
+.nav-menu li::after {
+  display: none;
+}
+
+/* Déconnexion */
+.logout {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #4a5568;
+  cursor: pointer;
+  font-size: 14px;
+  transition: color 0.2s;
+}
+
+.logout:hover {
+  color: #e53e3e;
+}
+
+/* ===== DASHBOARD ===== */
+.dashboard {
+  padding: 30px;
+  background-color: #f8fafc;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Cards */
+.card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+}
+
+.welcome-card h2 {
+  color: #1e293b;
+}
+
+.success-card {
+  border-left: 6px solid #3b82f6;
+}
+
+.icon-circle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #e0f2fe;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #0284c7;
+}
+
+.icon-circle.blue {
+  background-color: #dbeafe;
+  color: #2563eb;
+}
+
+
+
+/********************************************** main ****************************/
+
+/* Zone principale */
+main {
+  padding: 40px;
+  background-color: #f4f6f8;
+  min-height: calc(100vh - 70px); /* hauteur sans header */
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Section 1 */
+.section1 {
+  background: #ffffff; 
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  margin-bottom: 30px;
+}    
+
+.section1 h2 {
+  margin-bottom: 10px;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.section1 span {
+  color: #4a5568;
+  font-size: 15px;
+}
+
+/* Section 2 */
+.section2 {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
+.section2 h2 {
+  margin-bottom: 10px;
+  color: #2d3748;
+  font-weight: 600;
+}
+
+.section2 span {
+  color: #4a5568;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+/****************************************  main **************************************************/
+
+/* Zone principale */
+.dashboard {
+  padding: 30px;
+  background-color: #f8fafc;
+  min-height: calc(100vh - 70px);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Carte générique */
+.card {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  padding: 24px;
+  margin-bottom: 24px;
+  border: 1px solid #e5e7eb;
+}
+
+/* Carte succès (bleutée) */
+.success-card {
+  background-color: #f1f5ff;
+  border: 1px solid #c7d2fe;
+}
+
+/* Icône cercle */
+.icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: #eef2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+/* Variante bleue */
+.icon-circle.blue {
+  background-color: #e0e7ff;
+}
+
+/* Titres */
+.card h2 {
+  margin: 0 0 6px;
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
+}
+
+/* Texte */
+.card p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+
+/* footer */  
+
+.app-footer {
+  background-color: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 13px;
+  color: #6b7280; 
+}
+
+
+
+/**************************** page liste des etudiants ******************************/
+
+/* ===== CONTAINER ===== */
+.liste-container {
+  padding: 30px;
+  background-color: #f8fafc;
+  min-height: 100vh;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== HEADER LISTE ===== */
+.liste-container > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.liste-container h1 {
+  font-size: 24px;
+  color: #1e293b;
+}
+
+/* Bouton Nouvel Étudiant */
+.liste-container button {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.liste-container button:hover {
+  background-color: #1e40af;
+}
+
+/* ===== TABLE ===== */
+.table-etudiants {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.table-etudiants th {
+  background-color: #f1f5f9;
+  color: #334155;
+  text-align: left;
+  padding: 14px;
+  font-size: 13px;
+  text-transform: uppercase;
+}
+
+.table-etudiants td {
+  padding: 14px;
+  font-size: 14px;
+  color: #475569;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table-etudiants tbody tr:hover {
+  background-color: #f8fafc;
+}
+
+/* ===== ACTIONS ===== */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+}
+
+/* Base icon button */
+.icon-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.35s ease;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* Edit */
+.icon-btn.edit {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    color: #fff;
+}
+
+.icon-btn.edit:hover {
+    transform: translateY(-5px) rotate(-8deg) scale(1.1);
+    box-shadow: 0 12px 30px rgba(59,130,246,0.45);
+}
+
+/* Delete */
+.icon-btn.delete {
+    background: linear-gradient(135deg, #ef4444, #991b1b);
+    color: #fff;
+}
+
+.icon-btn.delete:hover {
+    transform: translateY(-5px) rotate(8deg) scale(1.1);
+    box-shadow: 0 12px 30px rgba(239,68,68,0.45);
+}
+
+/* Click effect */
+.icon-btn:active {
+    transform: scale(0.92);
+}
+
+/* Tooltip simple */
+.icon-btn::after {
+    content: attr(title);
+    position: absolute;
+    bottom: -32px;
+    background: #111827;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.icon-btn:hover::after {
+    opacity: 1;
+}
+
+/* ===== RETOUR ===== */
+/* ===== RETOUR BUTTON ===== */
+.retour {
+  margin-top: 25px;
+  margin-left: auto;              /* 👉 position à droite */
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  background-color: #ffffff;
+  color: #2563eb;
+  border: 1px solid #c7d2fe;
+  padding: 10px 16px;
+  border-radius: 8px;
+
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: all 0.25s ease;
+}
+
+/* Hover */
+.retour:hover {
+  background-color: #2563eb;
+  color: #ffffff;
+  border-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+/* Icône */
+.retour svg {
+  font-size: 18px;
+}
+
+
+
+/* **************************** page ajouter *************************/
+
+/* ===== Page ===== */
+.ajouter-container {
+    min-height: 100vh;
+    background: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 35px 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Title ===== */
+.title {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 25px;
+}
+
+/* ===== Form Card ===== */
+.ajouter-container form {
+    background: #ffffff;
+    width: 100%;
+    max-width: 480px;
+    padding: 25px;
+    border-radius: 14px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* ===== Rows (2 inputs per row) ===== */
+.ajouter-container form > div {
+    display: flex;
+    gap: 12px;
+}
+
+/* ===== Inputs & Select ===== */
+.ajouter-container input,
+.ajouter-container select {
+    flex: 1;
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    font-size: 0.95rem;
+    transition: 0.25s;
+}
+
+.ajouter-container input:focus,
+.ajouter-container select:focus {
+    border-color: #2563eb;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(37,99,235,0.15);
+}
+
+/* ===== Select full width ===== */
+.ajouter-container select {
+    width: 100%;
+}
+
+/* ===== Buttons row ===== */
+.ajouter-container form div:last-child {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+/* ===== Buttons ===== */
+.ajouter-container form button {
+    flex: 1;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* Annuler */
+.ajouter-container form button:first-child {
+    background: #94a3b8;
+    color: white;
+}
+
+.ajouter-container form button:first-child:hover {
+    background: #64748b;
+}
+
+/* Ajouter */
+.ajouter-container form button:last-child {
+    background: #2563eb;
+    color: white;
+}
+
+.ajouter-container form button:last-child:hover {
+    background: #1d4ed8;
+}
+
+/* ===== Retour button ===== */
+.retoure {
+    margin-top: 28px;
+    background: none;
+    border: none;
+    color: #2563eb;
+    font-size: 1rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: 0.3s;
+}
+
+.retoure:hover {
+    color: #1d4ed8;
+    transform: translateX(-4px);
+}
+
+
+
+/* **************************** page modifier *************************/
+
+/* Police globale */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f8;
+}
+
+/* ===== FORMULAIRE ===== */
+.modifier-form {
+  width: 600px;
+  margin: 35px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Groupes */
+.modifier-form > div {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 18px;
+}
+
+/* Inputs & select */
+.modifier-form input,
+.modifier-form select {
+  width: 100%;
+  padding: 13px;
+  border-radius: 8px;
+  border: 1px solid #d1d1d1;
+  font-size: 14px;
+  background-color: #fafafa;
+  transition: 0.3s;
+}
+
+/* Focus */
+.modifier-form input:focus,
+.modifier-form select:focus {
+  outline: none;
+  border-color: #4a90e2;
+  background-color: #fff;
+  box-shadow: 0 0 5px rgba(74,144,226,0.4);
+}
+
+/* Select seul */
+.modifier-form select {
+  margin-bottom: 18px;
+}
+
+/* ===== BOUTONS ===== */
+.modifier-form button {
+  padding: 12px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Bouton ANNULER (NON MODIFIÉ visuellement) */
+.modifier-form button:first-child {
+  background: #e0e0e0;
+  color: #333;
+}
+
+/* Bouton MODIFIER (stylé) */
+.modifier-form button:last-child {
+  background: #4a90e2;
+  color: white;
+}
+
+.modifier-form button:last-child:hover {
+  background: #357abd;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(53,122,189,0.4);
+}
+
+
+/******************************* details ***************************************/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f4f6f8;
+}
+
+/* Carte principale */
+.details-card {
+  width: 520px;
+  margin: 10px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 14px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+}
+
+/* Titre */
+.details-card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: #4a90e2;
+  border-bottom: 2px solid #4a90e2;
+  padding-bottom: 10px;
+}
+
+/* Ligne info */
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Label */
+.label {
+  font-weight: bold;
+  color: #333;
+}
+
+/* Valeur */
+.value {
+  color: #555;
+} 
+
+.retourr{
+  margin-left: 500px;
+  background-color: #ffffff;
+  color: #2563eb;
+  border: 1px solid #c7d2fe;
+  
+  padding: 10px;
+  
+}
+
+
+/************************** confirmation supprission  ***********************************/
+
+/* Overlay qui assombrit l'arrière-plan */
+.custom-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* La boîte blanche */
+.custom-modal-box {
+    background: white;
+    width: 450px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    animation: fadeIn 0.2s ease-out;
+}
+
+/* Header Rouge */
+.custom-modal-header {
+    background-color: #e91e63; /* Couleur rose/rouge de ton image */
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.close-icon {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+/* Corps de la modale */
+.custom-modal-body {
+    padding: 30px 20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.warning-icon {
+    color: #f1c40f;
+    font-size: 24px;
+}
+
+.custom-modal-body p {
+    margin: 0;
+    font-size: 16px;
+    color: #333;
+}
+
+/* Footer avec les boutons bleus */
+.custom-modal-footer {
+    padding: 15px 20px;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.btn-modal {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    background-color: #2563eb; /* Bleu Bootstrap */
+    color: white;
+    transition: background 0.2s;
+}
+
+.btn-modal:hover {
+    background-color: #1d4ed8;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/******************************* inscriptions ***************************/
+.inscription-container {
+  max-width: 480px;
+  margin: 40px auto;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+  font-family: "Segoe UI", Tahoma, sans-serif;
+}
+
+.inscription-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #1e293b;
+}
+
+.inscription-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.inscription-form input,
+.inscription-form select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5f5;
+  font-size: 14px;
+}
+
+.inscription-form input:focus,
+.inscription-form select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.inscription-form button {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+}
+
+.inscription-form button:hover {
+  background-color: #1e40af;
+}
