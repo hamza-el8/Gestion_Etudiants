@@ -6,6 +6,7 @@ import { FiUser } from "react-icons/fi";
 import { FiCheckCircle } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { TbBackground } from "react-icons/tb";
+import Footer from "./Footer";
 
 
 
@@ -61,7 +62,9 @@ function Header() {
                 </section>
             </main>
 
-        </>
+            <Footer />      
+
+        </> 
     );
 }
 
